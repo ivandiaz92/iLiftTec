@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C408C1D918E4C49A00C79C99 /* ILTMusculoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C408C1D818E4C49A00C79C99 /* ILTMusculoTableViewCell.m */; };
+		C4292E0E18E4C99A0048B63E /* checkbox-checked.png in Resources */ = {isa = PBXBuildFile; fileRef = C4292E0C18E4C99A0048B63E /* checkbox-checked.png */; };
+		C4292E0F18E4C99A0048B63E /* checkbox-unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = C4292E0D18E4C99A0048B63E /* checkbox-unchecked.png */; };
 		C479A4F718DFC71400E049C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C479A4F618DFC71400E049C9 /* Foundation.framework */; };
 		C479A4F918DFC71400E049C9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C479A4F818DFC71400E049C9 /* CoreGraphics.framework */; };
 		C479A4FB18DFC71400E049C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C479A4FA18DFC71400E049C9 /* UIKit.framework */; };
@@ -35,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C408C1D718E4C49A00C79C99 /* ILTMusculoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILTMusculoTableViewCell.h; sourceTree = "<group>"; };
+		C408C1D818E4C49A00C79C99 /* ILTMusculoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILTMusculoTableViewCell.m; sourceTree = "<group>"; };
+		C4292E0C18E4C99A0048B63E /* checkbox-checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox-checked.png"; sourceTree = "<group>"; };
+		C4292E0D18E4C99A0048B63E /* checkbox-unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox-unchecked.png"; sourceTree = "<group>"; };
 		C479A4F318DFC71400E049C9 /* iLiftTec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLiftTec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C479A4F618DFC71400E049C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C479A4F818DFC71400E049C9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -118,6 +125,10 @@
 				C479A50518DFC71400E049C9 /* ILTAppDelegate.h */,
 				C479A50618DFC71400E049C9 /* ILTAppDelegate.m */,
 				C479A50818DFC71400E049C9 /* Main.storyboard */,
+				C4292E0C18E4C99A0048B63E /* checkbox-checked.png */,
+				C4292E0D18E4C99A0048B63E /* checkbox-unchecked.png */,
+				C408C1D718E4C49A00C79C99 /* ILTMusculoTableViewCell.h */,
+				C408C1D818E4C49A00C79C99 /* ILTMusculoTableViewCell.m */,
 				C479A50B18DFC71400E049C9 /* ILTMasterViewController.h */,
 				C479A50C18DFC71400E049C9 /* ILTMasterViewController.m */,
 				C479A50E18DFC71400E049C9 /* ILTDetailViewController.h */,
@@ -236,7 +247,9 @@
 			files = (
 				C479A51218DFC71400E049C9 /* Images.xcassets in Resources */,
 				C479A50118DFC71400E049C9 /* InfoPlist.strings in Resources */,
+				C4292E0E18E4C99A0048B63E /* checkbox-checked.png in Resources */,
 				C479A50A18DFC71400E049C9 /* Main.storyboard in Resources */,
+				C4292E0F18E4C99A0048B63E /* checkbox-unchecked.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C479A50D18DFC71400E049C9 /* ILTMasterViewController.m in Sources */,
+				C408C1D918E4C49A00C79C99 /* ILTMusculoTableViewCell.m in Sources */,
 				C479A50718DFC71400E049C9 /* ILTAppDelegate.m in Sources */,
 				C479A50318DFC71400E049C9 /* main.m in Sources */,
 				C479A51018DFC71400E049C9 /* ILTDetailViewController.m in Sources */,
@@ -463,6 +477,7 @@
 				C479A52A18DFC71400E049C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C479A52B18DFC71400E049C9 /* Build configuration list for PBXNativeTarget "iLiftTecTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +486,7 @@
 				C479A52D18DFC71400E049C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

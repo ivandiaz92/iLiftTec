@@ -9,6 +9,7 @@
 #import "ILTMasterViewController.h"
 
 #import "ILTDetailViewController.h"
+#import "ILTMusculoTableViewCell.h"
 
 @interface ILTMasterViewController () {
     NSMutableArray *_objects;
@@ -27,6 +28,21 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+    /*UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+     self.navigationItem.rightBarButtonItem = addButton;*/
+    NSMutableArray *musculo = [[NSMutableArray alloc] initWithObjects: @"Pecho", @"Bicep", @"Espalda", @"Hombro", @"Tricep", @"Trapecio", nil];
+   // NSMutableArray *email = [[NSMutableArray alloc] initWithObjects:@"ivan@gmail.com", @"tania@gmail.com", @"aza@gmail.com", @"david@gmail.com", nil];
+    
+    _objects = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i< [musculo count]; i++){
+        NSDictionary *miPerfil = [[NSDictionary alloc] initWithObjectsAndKeys:[musculo objectAtIndex:i], @"musculo", nil];
+        //[email objectAtIndex:i], @"email", nil];
+        [_objects addObject:miPerfil];
+        
+        [super viewDidLoad];
+    }
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
@@ -62,12 +78,36 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    ILTMusculoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    NSDictionary *object = _objects[indexPath.row];
+    cell.musculoLabel.text = [object objectForKey:@"musculo"];
+    
+    
+    /*cell.textLabel.text = @"\u2001 Wi-Fi 1";
+    cell.detailTextLabel.text = @"\U0001F512 \u268A";
+    
+    cell.textLabel.text = @"\u2001 Wi-Fi 2";
+    cell.detailTextLabel.text = @"\U0001F512 \u268C";
+    
+    cell.textLabel.text = @"\u2705 Wi-Fi 3";
+    cell.detailTextLabel.text = @"\U0001F513 \u2630";*/
+        
     return cell;
+   
 }
+
+/*- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+}*/
+
+-(void)tableView:(UITableView *)tableView
+accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {

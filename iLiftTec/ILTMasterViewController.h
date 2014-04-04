@@ -10,4 +10,7 @@
 
 @interface ILTMasterViewController : UITableViewController
 
+@property(nonatomic) UITableViewCellAccessoryType accessoryType;
+
+
 @end
